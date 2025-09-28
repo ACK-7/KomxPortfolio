@@ -9,13 +9,14 @@ const Hero = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
+  const ownerImageRef = useRef<HTMLImageElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const container = containerRef.current;
     const title = titleRef.current;
     const subtitle = subtitleRef.current;
-    const ownerImage = imageRef.current;
+    const ownerImage = ownerImageRef.current;
     const cta = ctaRef.current;
 
     if (!container || !title || !subtitle || !ownerImage || !cta) return;
@@ -76,7 +77,7 @@ const Hero = () => {
     <section
       id="home"
       ref={containerRef}
-      className="relative h-[100vh] flex items-center overflow-hidden"
+      className="relative min-h-[100vh] flex items-center overflow-hidden"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -90,14 +91,15 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-10 sm:py-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[50vh] sm:min-h-[70vh]">
           {/* Owner Image */}
-          <div ref={imageRef} className="flex justify-center lg:justify-end">
+          <div className="flex justify-center lg:justify-end">
             <img
+              ref={ownerImageRef}
               src="/images/komuli.png"
               alt="Denis Komuli - Architect"
-              className="h-auto max-w-[2500px]  object-cover"
+              className="h-auto max-w-full sm:max-w-sm md:max-w-md lg:max-w-lg object-cover"
             />
           </div>
 
@@ -105,7 +107,7 @@ const Hero = () => {
           <div className="text-center lg:text-left">
             <h1
               ref={titleRef}
-              className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 text-gradient"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 text-gradient"
             >
               Hey, I am
               <br />
@@ -114,7 +116,7 @@ const Hero = () => {
 
             <p
               ref={subtitleRef}
-              className="text-lg md:text-xl text-foreground/80 mb-8 leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-foreground/80 mb-6 sm:mb-8 leading-relaxed"
             >
               A passionate architect crafting innovative, sustainable designs that shape
               the future of urban living. Let's build something extraordinary together.
