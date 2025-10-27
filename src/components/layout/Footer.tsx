@@ -21,7 +21,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="text-2xl font-display font-bold text-gradient mb-4">
-              KOMULI DENIS
+              KOMULI DENNIS
             </div>
             <p className="text-slate-300 leading-relaxed mb-6">
               Pioneering sustainable architecture for the future of urban living.
@@ -51,7 +51,7 @@ const Footer = () => {
 
         <div className="border-t border-border/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-slate-400 text-sm">
-            © {new Date().getFullYear()} Komuli Denis Architecture. All rights reserved.
+            © {new Date().getFullYear()} Komuli Dennis Architecture. All rights reserved.
           </div>
 
           <div className="flex items-center gap-2 text-slate-400 text-sm">

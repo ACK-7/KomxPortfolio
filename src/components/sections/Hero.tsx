@@ -98,7 +98,7 @@ const Hero = () => {
             <img
               ref={ownerImageRef}
               src="/images/komuli.png"
-              alt="Denis Komuli - Architect"
+              alt="Dennis Komuli - Architect"
               className="h-auto max-w-full sm:max-w-sm md:max-w-md lg:max-w-lg object-cover"
             />
           </div>
@@ -111,7 +111,7 @@ const Hero = () => {
             >
               Hey, I am
               <br />
-              <span className="text-primary">Denis</span>
+              <span className="text-primary">Dennis</span>
             </h1>
 
             <p
